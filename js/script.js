@@ -84,13 +84,13 @@ function updateAmmo() {
     //Style
     if (ammo <= 1) {//De 0 à 1 => rouge
         displayAmmo.style.color = "#e50513"; 
-        document.querySelector('#img-ammo').setAttribute('src', 'images/robinet-rouge.svg');
+        document.querySelector('#img-ammo').setAttribute('src', 'images/waterdrop.png');
     } else if ((ammo > 1) && (ammo <= 3)) {//De 1 à 3 => Orange
         displayAmmo.style.color = "#F6830F";
-        document.querySelector('#img-ammo').setAttribute('src', 'images/robinet-orange.svg');
+        document.querySelector('#img-ammo').setAttribute('src', 'images/waterdrop.png');
     } else {// Sinon vert
         displayAmmo.style.color = "#024400";
-        document.querySelector('#img-ammo').setAttribute('src', 'images/robinet-green.svg');
+        document.querySelector('#img-ammo').setAttribute('src', 'images/waterdrop.png');
     }
 }
 
@@ -231,7 +231,7 @@ function startGame() {
     updateAmmo();
     //Style
     myCanvas.style.backgroundImage = "url('images/game-background.jpg')";
-    restartBtn.value = "Clean Again!";
+    restartBtn.value = "Restart";
     restartBtn.classList.remove('clignote');
     document.body.contains(introHTML) ? playingInfoHTML.removeChild(introHTML) : "";
     displayAccuracy.style.color = "black";
@@ -305,7 +305,7 @@ myCanvas.addEventListener('click', (e) => {
 })
 
 //A l'initialisation de la page
-printIntro("Don't you think we should take great care of our planet? Engage yourself and enjoy splashing some bad guys!!");
+printIntro("Akira's mission is crucial; He must gather the fabled Xbees from the XbeeArmy to return their honey to the Xsaberz lab for testing. Eliminate each bee to retrieve the precious honey.");
 
 soundCtrl.addEventListener('click', () => {
     setSound();
